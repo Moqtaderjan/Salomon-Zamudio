@@ -1,0 +1,160 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+header {
+  background: #97efff;
+  color: black;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Adding gradient animation and hover effect */
+header h1 {
+  font-size: 3rem;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #0de95d, #212bf7, #eb0303, #a6c1ee);
+  animation: gradient-move 5s infinite;
+}
+
+header h1:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Gradient animation keyframes */
+@keyframes gradient-move {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+/* Button Styles */
+button {
+  background: linear-gradient(45deg, #05f825, #1201f6); /* Gradient background */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  text-transform: uppercase; /* Make text uppercase */
+}
+
+button:hover {
+  background: linear-gradient(45deg, #05f825, #1201f6); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
+  letter-spacing: 1px; /* Increase letter spacing */
+}
+
+button:active {
+  background: linear-gradient(45deg, #8a0f0f, #0a0954); /* Even darker on click */
+  transform: scale(0.98); /* Slightly shrink on click */
+  box-shadow: 0 2px 10px rgba(255, 105, 180, 0.2); /* Smaller shadow on click */
+}
+
+button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5); /* Focus glow effect */
+}
+
+
+/* Main content */
+main {
+  padding: 20px;
+}
+
+#intro {
+  margin-bottom: 20px;
+}
+
+#gallery {
+  margin: 20px 0;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery-images img {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+/* Footer styles */
+footer {
+  background: #333;
+  color: white;
+  padding: 10px;
+}
+
+/* Scroll to top button */
+#scroll-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #97efff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 1.5rem;
+  }
+
+  .gallery-images img {
+      max-width: 200px;
+  }
+
+  button {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.2rem;
+  }
+
+  button {
+      padding: 6px 10px;
+      font-size: 0.8rem;
+  }
+
+  .gallery-images img {
+      max-width: 150px;
+  }
+}
